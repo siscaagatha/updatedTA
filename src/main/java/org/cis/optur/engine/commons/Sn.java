@@ -7,12 +7,22 @@ public class Sn {
 
     public int [][] solutionMatrix;
     public double penalty = 0.0D;
-
+    public double[] ps = new double[9];
 
     public Sn(int [][] solutionMatrix) {
         this.solutionMatrix = solutionMatrix;
-        this.penalty = penalty1() + penalty2() + penalty3() + penalty4() + penalty5() +
-                penalty6() + penalty7() + penalty8() + penalty9();
+        this.ps[0] = penalty1();
+        this.ps[1] = penalty2();
+        this.ps[2] = penalty3();
+        this.ps[3] = penalty4();
+        this.ps[4] = penalty5();
+        this.ps[5] = penalty6();
+        this.ps[6] = penalty7();
+        this.ps[7] = penalty8();
+        this.ps[8] = penalty9();
+        for (double p : ps) {
+            this.penalty+=p;
+        }
     }
 
     public int[][] getSolutionMatrix(){

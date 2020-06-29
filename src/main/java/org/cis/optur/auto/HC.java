@@ -18,7 +18,7 @@ public class HC {
 
     static final String INIT_SOL_FILE_PATH = "E:\\INITIAL SOLUTION\\Optur7.sol";
 
-    static final String RESULT_FOLDER = "E:\\1. HILL CLIMBING\\OPTUR7 ";
+    static final String RESULT_FOLDER = "E:\\1. HILL CLIMBING";
 
     public static void main(String[] args) throws ParseException, InvalidFormatException, IOException, ClassNotFoundException {
         Utils.initSC(new File(XLS_FILE_PATH));
@@ -55,7 +55,7 @@ public class HC {
         }
 
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 1; i++) {
             int[][] temp = new int[initialSol.getInitialSolution().length][initialSol.getInitialSolution()[0].length];
             Utils.copySolutionMatrix(initialSol.getInitialSolution(), temp);
             HillClimbing hillClimbing = new HillClimbing(temp);
